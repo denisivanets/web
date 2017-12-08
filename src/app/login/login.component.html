@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-4"></div>
+
+  <div class="col-md-4 login-block">
+    <h2>Login</h2>
+    <div>
+      <div>
+        <label for="loginField">
+          <p>Login: </p>
+        </label>
+        <input
+          id="loginField"
+          type="text"
+          class="form-control"
+          [(ngModel)]="user.login"
+          [ngModelOptions]="{standalone: true}">
+      </div>
+      <div>
+        <label for="passField">
+          <p>Surname: </p>
+        </label>
+        <input
+          id="passField"
+          type="password"
+          class="form-control"
+          [(ngModel)]="user.password"
+          [ngModelOptions]="{standalone: true}">
+      </div>
+      <button
+        class="btn btn-primary login-btn"
+        (click)="login()"
+      >Login
+      </button>
+    </div>
+
+    <div class="col-md-4"></div>
+  </div>
+</div>
+

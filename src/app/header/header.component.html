@@ -1,0 +1,13 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="navbar-header">
+    <span class="navbar-brand">Flowers store</span>
+  </div>
+  <ul class="nav navbar-nav navbar-right register">
+    <li *ngIf="!showLogout()" routerLink="/login" class="cursor-pointer clickable"><a>Login</a></li>
+    <li *ngIf="!showLogout()" routerLink="/register" class="cursor-pointer clickable"><a>Register</a></li>
+    <li *ngIf="showLogout()"
+        routerLink="/logout"
+        class="cursor-pointer clickable"
+        (click)="logout()"><a>Logout</a></li>
+  </ul>
+</nav>

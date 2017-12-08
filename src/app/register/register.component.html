@@ -1,0 +1,65 @@
+<form name="registerForm">
+  <div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4 register-block">
+      <h2>Registration</h2>
+      <div>
+        <div>
+          <label for="nameField">
+            <p>Name: </p>
+          </label>
+          <input
+            id="nameField"
+            type="text"
+            class="form-control"
+            [(ngModel)]="userInfo.name"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="surnameField">
+            <p>Surname: </p>
+          </label>
+          <input
+            id="surnameField"
+            type="text"
+            class="form-control"
+            [(ngModel)]="userInfo.surname"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="login">
+            <p>Login: </p>
+          </label>
+          <input
+            id="login"
+            type="text"
+            class="form-control"
+            [(ngModel)]="userInfo.login"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="password">
+            <p>Password: </p>
+          </label>
+          <input
+            id="password"
+            type="password"
+            class="form-control"
+            [(ngModel)]="userInfo.password"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+      <button
+        class="btn btn-primary register-btn"
+        (click)="register()"
+        >
+        Register
+      </button>
+    </div>
+
+    <div class="col-md-4"></div>
+  </div>
+
+</form>
+
