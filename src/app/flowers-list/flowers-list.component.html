@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Flowers storage</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Color</th>
+          <th>Size</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let flower of flowers">
+          <td>{{flower.name}}</td>
+          <td>{{flower.color}}</td>
+          <td>{{flower.size}}</td>
+          <td>{{flower.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
