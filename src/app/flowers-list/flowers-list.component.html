@@ -14,7 +14,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let flower of flowers">
-          <td>{{flower.name}}</td>
+          <td (click)="showFlowerInfo(flower.id)" class="clickable">{{flower.name}}</td>
           <td>{{flower.color}}</td>
           <td>{{flower.size}}</td>
           <td>{{flower.price}}</td>

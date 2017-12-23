@@ -13,6 +13,7 @@ import {AuthService} from "./auth/auth.service";
 import {LoginComponent} from "./login/login.component";
 import {RoutingModule} from "./routing.module";
 import {LogoutComponent} from "./logout/logout.component";
+import {FlowerInfoComponent} from "./flower-info/flower-info.component";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {LogoutComponent} from "./logout/logout.component";
     RegisterComponent,
     HeaderComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    FlowerInfoComponent
   ],
   imports: [
     BrowserModule,

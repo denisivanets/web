@@ -12,8 +12,6 @@ export class AuthService implements OnInit {
     this._registeredUsers = JSON.parse(localStorage.getItem("users"));
   }
 
-  private _registeredUsers: User[];
-
   constructor(private userService: UserService) {
   }
 
@@ -45,7 +43,7 @@ export class AuthService implements OnInit {
   }
 
   private _identify(user: User) {
-    for (let oneUser: User of this._registeredUsers) {
+    for (let oneUser of this._registeredUsers) {
       if (user.login === oneUser.login) {
         return user.password === oneUser.password
       }
@@ -54,7 +52,7 @@ export class AuthService implements OnInit {
   }
 
   private _validateRegistration(user: User): boolean {
-    for (let chUser: User of this._registeredUsers) {
+    for (let chUser of this._registeredUsers) {
       if (chUser.login === user.login) {
         return false;
       }
